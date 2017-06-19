@@ -1,0 +1,12 @@
+PODS:
+  - GRMustache.swift (2.0.0)
+
+DEPENDENCIES:
+  - GRMustache.swift
+
+SPEC CHECKSUMS:
+  GRMustache.swift: 8a547c12bea16052071b2b540af83d770075f0eb
+
+PODFILE CHECKSUM: f27ceab7ffa005712ebac8695c5406226092bed0
+
+COCOAPODS: 1.0.1
