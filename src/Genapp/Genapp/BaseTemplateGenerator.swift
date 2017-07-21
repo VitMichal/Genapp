@@ -8,21 +8,32 @@
 
 import Mustache
 
+enum TemplateGenerator: Error {
+    case TemplateNotFound
+}
+
 public protocol BaseTemplateGenerator {
     var filename: String { get set }
-    func generate(data: TemplateInput) -> TemplateOutput
+    func generate(data: ObjectDefinition) -> TemplateOutput
 
 }
 
 public class BaseTemplateGeneratorImpl {
     public var filename: String = ""
-    public func generate(data: TemplateInput) -> TemplateOutput {
+    public var domainToTemplateInputConverter: DomainToTemplateInputConverter
+    public init(domainToTemplateInputConverter: DomainToTemplateInputConverter) {
+        Mustache.DefaultConfiguration.contentType = .text
+        self.domainToTemplateInputConverter = domainToTemplateInputConverter
+    }
+
+    public func generate(data: ObjectDefinition) -> TemplateOutput {
+        let templateInput = domainToTemplateInputConverter.convert(objectDefinition: data)
         do {
             let template = try Template(path: filename)
-            let output = try template.render(data)
+            let output = try template.render(templateInput)
             return output
-        } catch {
-            return ""
+        } catch (let error) {
+            return "\(error)"
         }
     }
 }

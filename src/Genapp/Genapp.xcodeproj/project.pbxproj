@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103206301F2227C600CF4CF1 /* DomainToTemplateInputConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1032062F1F2227C600CF4CF1 /* DomainToTemplateInputConverter.swift */; };
+		103206321F22295700CF4CF1 /* TemplateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103206311F22295700CF4CF1 /* TemplateInput.swift */; };
 		36A8D4A314FEC20DC42F2947 /* Pods_Genapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43C516A0740BF8FD059AB21 /* Pods_Genapp.framework */; };
 		586162491EF57AB7003FE91B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586162481EF57AB7003FE91B /* AppDelegate.swift */; };
 		5861624B1EF57AB7003FE91B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861624A1EF57AB7003FE91B /* ViewController.swift */; };
@@ -15,7 +17,7 @@
 		5861625B1EF57AB7003FE91B /* GenappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5861625A1EF57AB7003FE91B /* GenappTests.swift */; };
 		586162661EF57AB7003FE91B /* GenappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586162651EF57AB7003FE91B /* GenappUITests.swift */; };
 		58756B3F1EF581B100B7BBE5 /* BaseGeneratingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58756B3E1EF581B100B7BBE5 /* BaseGeneratingController.swift */; };
-		58756B421EF5827500B7BBE5 /* TemplateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58756B411EF5827500B7BBE5 /* TemplateInput.swift */; };
+		58756B421EF5827500B7BBE5 /* ObjectDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58756B411EF5827500B7BBE5 /* ObjectDefinition.swift */; };
 		58756B441EF584B100B7BBE5 /* TemplateOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58756B431EF584B100B7BBE5 /* TemplateOutput.swift */; };
 		58756B461EF6CC6A00B7BBE5 /* ControllerGeneratingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58756B451EF6CC6A00B7BBE5 /* ControllerGeneratingController.swift */; };
 		58756B481EF6CE2800B7BBE5 /* BaseTemplateGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58756B471EF6CE2800B7BBE5 /* BaseTemplateGenerator.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1032062F1F2227C600CF4CF1 /* DomainToTemplateInputConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainToTemplateInputConverter.swift; sourceTree = "<group>"; };
+		103206311F22295700CF4CF1 /* TemplateInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateInput.swift; sourceTree = "<group>"; };
 		166A7DD95998D40B0D9006AB /* Pods-GenappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenappUITests/Pods-GenappUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1C1848EC8AFEF542E5CD3DF4 /* Pods-Genapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Genapp/Pods-Genapp.release.xcconfig"; sourceTree = "<group>"; };
 		29A04DFE4562FAC5102A5114 /* Pods-GenappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GenappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GenappTests/Pods-GenappTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -59,7 +63,7 @@
 		586162651EF57AB7003FE91B /* GenappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenappUITests.swift; sourceTree = "<group>"; };
 		586162671EF57AB7003FE91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58756B3E1EF581B100B7BBE5 /* BaseGeneratingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGeneratingController.swift; sourceTree = "<group>"; };
-		58756B411EF5827500B7BBE5 /* TemplateInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateInput.swift; sourceTree = "<group>"; };
+		58756B411EF5827500B7BBE5 /* ObjectDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectDefinition.swift; sourceTree = "<group>"; };
 		58756B431EF584B100B7BBE5 /* TemplateOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateOutput.swift; sourceTree = "<group>"; };
 		58756B451EF6CC6A00B7BBE5 /* ControllerGeneratingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerGeneratingController.swift; sourceTree = "<group>"; };
 		58756B471EF6CE2800B7BBE5 /* BaseTemplateGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTemplateGenerator.swift; sourceTree = "<group>"; };
@@ -172,6 +176,9 @@
 			children = (
 				58756B471EF6CE2800B7BBE5 /* BaseTemplateGenerator.swift */,
 				58756B491EF6D11300B7BBE5 /* ControllerGenerator.swift */,
+				1032062F1F2227C600CF4CF1 /* DomainToTemplateInputConverter.swift */,
+				58756B431EF584B100B7BBE5 /* TemplateOutput.swift */,
+				103206311F22295700CF4CF1 /* TemplateInput.swift */,
 			);
 			name = Platform;
 			sourceTree = "<group>";
@@ -188,8 +195,7 @@
 		58756B401EF5826500B7BBE5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				58756B411EF5827500B7BBE5 /* TemplateInput.swift */,
-				58756B431EF584B100B7BBE5 /* TemplateOutput.swift */,
+				58756B411EF5827500B7BBE5 /* ObjectDefinition.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -473,9 +479,11 @@
 			files = (
 				5861624B1EF57AB7003FE91B /* ViewController.swift in Sources */,
 				58756B461EF6CC6A00B7BBE5 /* ControllerGeneratingController.swift in Sources */,
+				103206321F22295700CF4CF1 /* TemplateInput.swift in Sources */,
+				103206301F2227C600CF4CF1 /* DomainToTemplateInputConverter.swift in Sources */,
 				58756B441EF584B100B7BBE5 /* TemplateOutput.swift in Sources */,
 				58756B3F1EF581B100B7BBE5 /* BaseGeneratingController.swift in Sources */,
-				58756B421EF5827500B7BBE5 /* TemplateInput.swift in Sources */,
+				58756B421EF5827500B7BBE5 /* ObjectDefinition.swift in Sources */,
 				58756B481EF6CE2800B7BBE5 /* BaseTemplateGenerator.swift in Sources */,
 				586162491EF57AB7003FE91B /* AppDelegate.swift in Sources */,
 				58756B4A1EF6D11300B7BBE5 /* ControllerGenerator.swift in Sources */,

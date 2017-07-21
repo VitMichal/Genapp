@@ -2,18 +2,38 @@
 //  TemplateInput.swift
 //  Genapp
 //
-//  Created by Vít Míchal on 17.06.17.
+//  Created by Vít Míchal on 21.07.17.
 //  Copyright © 2017 Vít Míchal. All rights reserved.
 //
 
-public typealias Dependecies = [String]
+//public struct NamedField {
+//    let value: String
+//    public init(value: String) {
+//        self.value = value
+//    }
+//}
 
-public struct TemplateInput {
+public typealias TemplateValue = [String: String]
+public typealias TemplateValues = [TemplateValue]?
+public typealias TemplateInput = [String: Any]
+
+public struct TemplateInputFactory {
     public let name: String
-    public let dependecies: Dependecies?
-    
-    public init(name: String, dependecies: Dependecies?) {
-        self.name = name
-        self.dependecies = dependecies
+    public let methods: TemplateValues
+    public let dependecies: TemplateValues
+
+    static public func create(name: String, methods: TemplateValues, dependecies: TemplateValues) -> TemplateInput {
+        return [
+            "name": name,
+            "methods": methods ?? [],
+            "dependecies": dependecies ?? []
+        ]
     }
+
+    static public func createValue(value: String) -> TemplateValue {
+        return [ "value": value ]
+
+    }
+
 }
+

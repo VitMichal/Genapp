@@ -8,10 +8,17 @@
 
 import Domain
 
-public protocol {{filename}}: BaseController {
+public protocol {{name}}: BaseController {
+{{# methods }}    func {{ value }}
+{{/ methods}}}
 
-}
+public final class {{name}}Impl: BaseControllerImpl, {{name}} {
+    public init() {
 
-public final class {{filename}}Impl: BaseControllerImpl, {{filename}} {
+    }
+{{# methods }}
+    public func {{ value }} {
 
+    }
+{{/ methods}}
 }

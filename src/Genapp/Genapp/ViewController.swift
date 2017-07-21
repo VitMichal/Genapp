@@ -13,12 +13,20 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let generator = ControllerGenerator()
+        let convertor = DomainToTemplateInputConverterImpl()
+        let generator = ControllerGenerator(domainToTemplateInputConverter: convertor)
         let controller = ControllerGeneratingControllerImpl(controllerGenerator: generator)
-        let input = TemplateInput(name: "LalaContoller", dependecies: nil)
+
+        let input = ObjectDefinition(
+            name: "LalaContoller",
+            methods: ["get() -> Bool", "set() -> String"],
+            dependecies: ["LalaFacade", "TutuController"]
+        )
+
         let output = controller.generate(data: input)
-        print (output)
-        
+        print(output)
+
+        NSApplication.shared().terminate(self)
     }
 
     override var representedObject: Any? {

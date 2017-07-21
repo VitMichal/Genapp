@@ -9,7 +9,7 @@
 public protocol BaseGeneratingController {
     var output: TemplateOutput { get }
 
-    func generate(data: TemplateInput) -> TemplateOutput
+    func generate(data: ObjectDefinition) -> TemplateOutput
     func getOutput() -> TemplateOutput
 }
 

@@ -16,7 +16,7 @@ public class ControllerGeneratingControllerImpl: BaseGeneratingControllerImpl {
         self.controllerGenerator = controllerGenerator
     }
     
-    func generate(data: TemplateInput) -> TemplateOutput {
+    func generate(data: ObjectDefinition) -> TemplateOutput {
        return controllerGenerator.generate(data: data)
     }
     
