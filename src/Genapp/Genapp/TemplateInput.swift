@@ -34,6 +34,10 @@ public struct TemplateInputFactory {
         return [ "value": value ]
 
     }
-
+    
+    static public func createDependencyValue(variable: String, type: String) -> TemplateValue {
+        return [ "variable": variable, "type": type ]
+        
+    }
 }
 

@@ -11,11 +11,16 @@ public protocol DomainToTemplateInputConverter {
 }
 
 public class DomainToTemplateInputConverterImpl: DomainToTemplateInputConverter {
+    
     public func convert(objectDefinition: ObjectDefinition) -> TemplateInput {
         let methods = makeNamedArray(values: objectDefinition.methods)
-        let dependecies = makeNamedArray(values: objectDefinition.dependecies)
+        let dependecies = makeDependeciesArray(values: objectDefinition.dependecies)
 
-        return TemplateInputFactory.create(name: objectDefinition.name, methods: methods, dependecies: dependecies)
+        return TemplateInputFactory.create(
+            name: objectDefinition.name,
+            methods: methods,
+            dependecies: dependecies
+        )
     }
 
     private func makeNamedArray(values: [String]?) -> [TemplateValue] {
@@ -26,5 +31,22 @@ public class DomainToTemplateInputConverterImpl: DomainToTemplateInputConverter 
             }
         }
         return namedArray
+    }
+    
+    private func makeDependeciesArray(values: [String]?) -> [TemplateValue] {
+        var namedArray = [TemplateValue]()
+        if let values = values {
+            for value in values {
+                let variable = makeFirstLetterLowerCase(string: value)
+                namedArray.append(TemplateInputFactory.createDependencyValue(variable: variable, type: value))
+            }
+        }
+        return namedArray
+    }
+    
+    private func makeFirstLetterLowerCase(string: String) -> String {
+        let range = string.startIndex..<string.startIndex
+        let lowerFirstLetter = String(string[string.startIndex]).lowercased()
+        return string.replacingCharacters(in: range, with: lowerFirstLetter)
     }
 }

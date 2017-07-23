@@ -11,8 +11,8 @@ import Foundation
 
 public class ControllerGenerator: BaseTemplateGeneratorImpl, BaseTemplateGenerator {
     
-    public override init() {
-        super.init()
+    public override init(domainToTemplateInputConverter: DomainToTemplateInputConverter) {
+        super.init(domainToTemplateInputConverter: domainToTemplateInputConverter)
         self.filename = "/Users/vita/Projekty/Genapp/templates/Application/Controller.swift"
     }
 }
