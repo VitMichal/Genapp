@@ -15,7 +15,9 @@ public protocol {{name}}: BaseController {
 public final class {{name}}Impl: BaseControllerImpl, {{name}} {
 {{# dependecies}}    let {{variable}}: {{type}}
 {{/ dependecies}}
-    public init() {
+    public init({{# dependecies}}{{variable}}: {{type}}, {{/ dependecies}}synchronizer: Synchronizer) {
+{{# dependecies}}        self.{{variable}} = {{variable}}
+{{/ dependecies}}        super.init(synchronizer: synchronizer)
 
     }
 {{# methods }}

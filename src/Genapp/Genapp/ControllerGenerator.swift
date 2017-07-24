@@ -13,6 +13,7 @@ public class ControllerGenerator: BaseTemplateGeneratorImpl, BaseTemplateGenerat
     
     public override init(domainToTemplateInputConverter: DomainToTemplateInputConverter) {
         super.init(domainToTemplateInputConverter: domainToTemplateInputConverter)
-        self.filename = "/Users/vita/Projekty/Genapp/templates/Application/Controller.swift"
+        //self.filename = "/Users/vita/Projekty/Genapp/templates/Application/Controller.swift"
+        self.filename = "/Users/vitmichal/Genapp/templates/Application/Controller.swift"
     }
 }
