@@ -13,8 +13,8 @@ public protocol {{name}}: BaseController {
 {{/ methods}}}
 
 public final class {{name}}Impl: BaseControllerImpl, {{name}} {
-    {{# dependecies}}{{variable}}: {{type}}
-    {{/ dependecies}}
+{{# dependecies}}    let {{variable}}: {{type}}
+{{/ dependecies}}
     public init() {
 
     }

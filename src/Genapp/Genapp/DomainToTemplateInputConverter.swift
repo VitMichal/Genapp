@@ -45,7 +45,7 @@ public class DomainToTemplateInputConverterImpl: DomainToTemplateInputConverter 
     }
     
     private func makeFirstLetterLowerCase(string: String) -> String {
-        let range = string.startIndex..<string.startIndex
+        let range = string.startIndex..<string.index(after: string.startIndex)
         let lowerFirstLetter = String(string[string.startIndex]).lowercased()
         return string.replacingCharacters(in: range, with: lowerFirstLetter)
     }
